@@ -22,7 +22,7 @@ const PostSchema = new mongoose.Schema({
     required: false,
   },
   status: {
-    type: String,
+    type: Number,
     required: true,
   },
   notes: {

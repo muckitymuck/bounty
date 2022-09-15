@@ -4,15 +4,18 @@
     <div class="col-6">
       <h2><%= post.title %></h2>
       <!-- <img class="img-fluid" src="<%= post.image%>" /> -->
-      <h3><%= post.companylink %></h3>
+      <h4>Company link:</h4>
+      <a href="<%= post.companylink%>" ><%= post.companylink %></a>
+      <h4>Position Link:</h4>
+      <a href="<%= post.companylink%>"><%= post.companylink %></a>
       <div class="row justify-content-between">
-        <form
+        <!-- <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
-        </form>
+        </form> -->
         <!-- <h3 class="col-3">Likes: <%= post.likes %></h3> -->
         <%if(post.user == user.id){ %>
         <form
@@ -26,10 +29,10 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <p><%= post.companylink %></p>
+      <!-- empty column currently -->
     </div>
     <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/position">Return to Profile</a>
+      <a class="btn btn-primary" href="/position">Add a New Position</a>
       <a class="btn btn-primary" href="/hitlist">Return to HitList</a>
     </div>
   </div>

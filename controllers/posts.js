@@ -36,7 +36,7 @@ module.exports = {
         companylink: req.body.companylink,
         joblink: req.body.joblink,
         contacts: req.body.contacts,
-        status: req.body.status,
+        status: 1,
         notes: req.body.notes,
         //cloudinaryId: result.public_id,
         user: req.user.id,
