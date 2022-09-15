@@ -29,14 +29,16 @@ module.exports = {
   createPosition: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
+      //const result = await cloudinary.uploader.upload(req.file.path);
 
       await Post.create({
         title: req.body.title,
-        image: result.secure_url,
-        cloudinaryId: result.public_id,
-        caption: req.body.caption,
-        likes: 0,
+        companylink: req.body.companylink,
+        joblink: req.body.joblink,
+        contacts: req.body.contacts,
+        status: req.body.status,
+        notes: req.body.notes,
+        //cloudinaryId: result.public_id,
         user: req.user.id,
       });
       console.log("Post has been added!");
@@ -45,20 +47,20 @@ module.exports = {
       console.log(err);
     }
   },
-  likePost: async (req, res) => {
-    try {
-      await Post.findOneAndUpdate(
-        { _id: req.params.id },
-        {
-          $inc: { likes: 1 },
-        }
-      );
-      console.log("Likes +1");
-      res.redirect(`/post/${req.params.id}`);
-    } catch (err) {
-      console.log(err);
-    }
-  },
+  // likePost: async (req, res) => {
+  //   try {
+  //     await Post.findOneAndUpdate(
+  //       { _id: req.params.id },
+  //       {
+  //         $inc: { likes: 1 },
+  //       }
+  //     );
+  //     console.log("Likes +1");
+  //     res.redirect(`/post/${req.params.id}`);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // },
   deletePost: async (req, res) => {
     try {
       // Find post by id

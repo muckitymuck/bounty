@@ -5,20 +5,28 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
+  companylink: {
     type: String,
     require: true,
   },
-  cloudinaryId: {
-    type: String,
-    require: true,
-  },
-  caption: {
+  // cloudinaryId: {
+  //   type: String,
+  //   require: true,
+  // },
+  joblink: {
     type: String,
     required: true,
   },
-  likes: {
-    type: Number,
+  contacts: {
+    type: String,
+    required: false,
+  },
+  status: {
+    type: String,
+    required: true,
+  },
+  notes: {
+    type: String,
     required: true,
   },
   user: {
