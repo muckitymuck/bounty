@@ -8,6 +8,7 @@
       <a href="<%= post.companylink%>" ><%= post.companylink %></a>
       <h4>Position Link:</h4>
       <a href="<%= post.companylink%>"><%= post.companylink %></a>
+      <h3>Owner's Information:</h3>
       <div class="row justify-content-between">
         <!-- <form
           class="col-1"
@@ -18,8 +19,10 @@
         </form> -->
         <%if(post.user == user.id){ %>
           <div class="mb-3">
-            <h4><label for="contacts">Contacts notes:</label></h4>
+            <h4><label for="contacts">Contacts:</label></h4>
             <p id="contacts"><%= post.contacts %></p>
+            <h4><label for="notes">Notes:</label></h4>
+            <p id="notes"><%= post.notes %></p>
           </div>
 
         <form
