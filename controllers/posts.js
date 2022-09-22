@@ -61,6 +61,7 @@ module.exports = {
   //     console.log(err);
   //   }
   // },
+
   deletePost: async (req, res) => {
     try {
       // Find post by id
