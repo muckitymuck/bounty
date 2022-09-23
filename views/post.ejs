@@ -8,6 +8,17 @@
       <a href="<%= post.companylink%>" ><%= post.companylink %></a>
       <h4>Position Link:</h4>
       <a href="<%= post.companylink%>"><%= post.companylink %></a>
+      <!-- <div class="col-6 mt-5">  
+        <div>    
+          <h6 ><label for="createdAt">Freshness Dated:</label></h6>
+          <h6><%= post.createdAt %></h6>
+        </div>
+        <div>
+          <h6 ><label for="status">Status:</label></h6>
+          <h6><%= post.status %></h6>
+        </div>
+      </div> -->
+
       <h3>Owner's Information:</h3>
       <div class="row justify-content-between">
         <!-- <form
@@ -36,8 +47,17 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <!-- empty column currently -->
-    </div>
+
+        <div>    
+          <h6 ><label for="createdAt">Freshness Dated:</label></h6>
+          <h6><%= post.createdAt %></h6>
+        </div>
+        <div>
+          <h6 ><label for="status">Status:</label></h6>
+          <h6><%= post.status %></h6>
+        </div>
+      </div>
+
     <!-- Navigation Buttons -->
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/position">Add a New Position</a>
