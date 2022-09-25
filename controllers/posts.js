@@ -26,6 +26,15 @@ module.exports = {
       console.log(err);
     }
   },
+  getPostEdit: async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id,);
+      res.render("positionEdit.ejs", { post: post, user: req.user });
+
+    } catch (err) {
+      console.log(err);
+    }
+  },
   createPosition: async (req, res) => {
     try {
       // Upload image to cloudinary
@@ -43,6 +52,29 @@ module.exports = {
       });
       console.log("Post has been added!");
       res.redirect("/position");
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  editPosition: async (req, res) => {
+    try {
+
+
+      await Post.findOneAndUpdate({ _id: req.params.id},
+        {
+          $inc: 
+            {title: req.body.title,
+            companylink: req.body.companylink,
+            joblink: req.body.joblink,
+            contacts: req.body.contacts,
+            status: req.body.status,
+            notes: req.body.notes,
+            //cloudinaryId: result.public_id,
+            //user: req.user.id,
+            },
+      });
+      console.log("Post has been updated!");
+      res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
     }

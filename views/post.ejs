@@ -8,26 +8,10 @@
       <a href="<%= post.companylink%>" ><%= post.companylink %></a>
       <h4>Position Link:</h4>
       <a href="<%= post.companylink%>"><%= post.companylink %></a>
-      <!-- <div class="col-6 mt-5">  
-        <div>    
-          <h6 ><label for="createdAt">Freshness Dated:</label></h6>
-          <h6><%= post.createdAt %></h6>
-        </div>
-        <div>
-          <h6 ><label for="status">Status:</label></h6>
-          <h6><%= post.status %></h6>
-        </div>
-      </div> -->
 
       <h3>Owner's Information:</h3>
       <div class="row justify-content-between">
-        <!-- <form
-          class="col-1"
-          action="/post/likePost/<%= post.id %>?_method=PUT"
-          method="POST"
-        >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
-        </form> -->
+
         <%if(post.user == user.id){ %>
           <div class="mb-3">
             <h4><label for="contacts">Contacts:</label></h4>
@@ -43,6 +27,13 @@
         >
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
+        <form
+        action="/post/getPostEdit/<%= post.id %>?_method=PUT"
+        method="PUT"
+        class="col-3"
+      >
+      <input type="text" class="form-control" id="title" name="title" value="<%= post.title %>">
+      </form>
         <%}%>
       </div>
     </div>
@@ -50,11 +41,11 @@
 
         <div>    
           <h6 ><label for="createdAt">Freshness Dated:</label></h6>
-          <h6><%= post.createdAt %></h6>
+          <h5><%= post.createdAt.toDateString() %></h5>
         </div>
         <div>
           <h6 ><label for="status">Status:</label></h6>
-          <h6><%= post.status %></h6>
+          <h5><%= post.status %></h5>
         </div>
       </div>
 
@@ -62,6 +53,7 @@
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/position">Add a New Position</a>
       <a class="btn btn-primary" href="/hitlist">Return to HitList</a>
+      <a class="btn btn-primary" href="/positionEdit/<%= post._id%>">Edit this Position</a>
     </div>
   </div>
 </div>

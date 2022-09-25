@@ -9,7 +9,9 @@ router.get("/:id", ensureAuth, postsController.getPost);
 
 router.post("/createPosition", upload.single("file"), postsController.createPosition);
 
-//router.put("/likePost/:id", postsController.likePost);
+router.put("/getPostEdit/:id", postsController.editPosition);
+
+router.get("/:id", ensureAuth, postsController.getPostEdit);
 
 router.delete("/deletePost/:id", postsController.deletePost);
 
