@@ -66,11 +66,11 @@ module.exports = {
         {
   
             title: req.body.newtitle,
-            companylink: req.body.companylink,
-            joblink: req.body.joblink,
-            contacts: req.body.contacts,
-            status: req.body.status,
-            notes: req.body.notes,
+            companylink: req.body.newcompanylink,
+            joblink: req.body.newjoblink,
+            contacts: req.body.newcontacts,
+            status: req.body.newstatus,
+            notes: req.body.newnotes,
             //cloudinaryId: result.public_id,
             //user: req.user.id,
         }, {new: true    
