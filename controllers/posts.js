@@ -69,7 +69,7 @@ module.exports = {
             companylink: req.body.newcompanylink,
             joblink: req.body.newjoblink,
             contacts: req.body.newcontacts,
-            status: req.body.newstatus,
+            //status: req.body.newstatus,
             notes: req.body.newnotes,
             //cloudinaryId: result.public_id,
             //user: req.user.id,
