@@ -9,7 +9,7 @@ router.get("/:id", ensureAuth, postsController.getPost);
 
 router.post("/createPosition", upload.single("file"), postsController.createPosition);
 
-router.put("/getPostEdit/:id", postsController.editPosition);
+router.put("/editPosition/:id", postsController.editPosition);
 
 router.get("/:id", ensureAuth, postsController.getPostEdit);
 

@@ -26,6 +26,7 @@ module.exports = {
       console.log(err);
     }
   },
+
   getPostEdit: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id,);
@@ -57,13 +58,14 @@ module.exports = {
     }
   },
   editPosition: async (req, res) => {
+    console.log("Clicked Update")
     try {
 
 
       await Post.findOneAndUpdate({ _id: req.params.id},
         {
-          $inc: 
-            {title: req.body.title,
+  
+            title: req.body.newtitle,
             companylink: req.body.companylink,
             joblink: req.body.joblink,
             contacts: req.body.contacts,
@@ -71,12 +73,14 @@ module.exports = {
             notes: req.body.notes,
             //cloudinaryId: result.public_id,
             //user: req.user.id,
-            },
+        }, {new: true    
+            
       });
       console.log("Post has been updated!");
       res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
+      res.redirect(`/post/${req.params.id}`);
     }
   },
   // likePost: async (req, res) => {

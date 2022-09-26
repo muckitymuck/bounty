@@ -7,7 +7,7 @@
       <h4>Company link:</h4>
       <a href="<%= post.companylink%>" ><%= post.companylink %></a>
       <h4>Position Link:</h4>
-      <a href="<%= post.companylink%>"><%= post.companylink %></a>
+      <a href="<%= post.companylink%>"><%= post.joblink %></a>
 
       <h3>Owner's Information:</h3>
       <div class="row justify-content-between">
@@ -28,11 +28,32 @@
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <form
-        action="/post/getPostEdit/<%= post.id %>?_method=PUT"
-        method="PUT"
-        class="col-3"
-      >
-      <input type="text" class="form-control" id="title" name="title" value="<%= post.title %>">
+          action="/post/editPosition/<%= post.id %>?_method=PUT"
+          method="POST"
+          class="col-6"
+        >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <%= post.title %>
+          <input type="text" class="form-control" id="newtitle" name="newtitle">
+        </div>
+        <div class="mb-3">
+          <label for="companylink" class="form-label">Company Link</label>
+          <textarea class="form-control" id="companylink" name="companylink" value="<%= post.companylink %>"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="joblink" class="form-label">Job Link</label>
+          <textarea class="form-control" id="joblink" name="joblink"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="contacts" class="form-label">Contacts</label>
+          <textarea class="form-control" id="contacts" name="contacts"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="notes" class="form-label">Notes</label>
+          <textarea class="form-control" id="notes" name="notes"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Edit this Position</button>
       </form>
         <%}%>
       </div>
@@ -53,7 +74,7 @@
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/position">Add a New Position</a>
       <a class="btn btn-primary" href="/hitlist">Return to HitList</a>
-      <a class="btn btn-primary" href="/positionEdit/<%= post._id%>">Edit this Position</a>
+      
     </div>
   </div>
 </div>
