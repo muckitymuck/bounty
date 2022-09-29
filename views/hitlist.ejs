@@ -1,14 +1,14 @@
 <%- include('partials/header') -%>
-  <div class="container">
+  <div class="sm mx-32">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
+            <a href="/post/<%= posts[i]._id%>" class="text-2xl mt-2 text-zinc-50">
               <p src="/posts[i].companylink%>"><%= posts[i].companylink%></p>
-                <div class="row">
-                  <p class="lead col-md-8" src="/posts[i].title%>"><%= posts[i].title%></p>
-                  <p class="col-md-4" src="/posts[i].status%"><%= posts[i].status%></p>
+                <div class="flex-row">
+                  <p class="text-sm text-zinc-50" src="/posts[i].title%>"><%= posts[i].title%></p>
+                  <p class="text-sm text-zinc-50" src="/posts[i].createdAt.toDateString()%>"><%= posts[i].createdAt.toDateString()%></p>
                   <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
                 </div>
             </a>
