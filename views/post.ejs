@@ -1,50 +1,63 @@
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2 name="title" id="title"><%= post.title %></h2>
-      <!-- <img class="img-fluid" src="<%= post.image%>" /> -->
-      <h4>Company link:</h4>
-      <a href="<%= post.companylink%>" id="companylink"><%= post.companylink %></a>
-      <h4>Position Link:</h4>
-      <a href="<%= post.joblink%>" id="joblink"><%= post.joblink %></a>
+<div class="sm mx-32">
+  <div class="container px-4">
+    <div class="sm">
 
-      <h3>Owner's Information:</h3>
+      <h2 name="title" id="title" class="text-3xl text-zinc-50"><%= post.title %></h2>
+      <!-- <img class="img-fluid" src="<%= post.image%>" /> -->
+      <div class="">
+        <div>    
+          <h6 class="text-md mt-2"><label for="createdAt">Freshness Dated:</label></h6>
+          <h5 class="text-sm text-zinc-50"><%= post.createdAt.toDateString() %></h5>
+        </div>
+        <div>
+          <h6 class="text-xl mt-2"><label for="status">Status:</label></h6>
+          <h5 class="text-zinc-50"><%= post.status %></h5>
+        </div>
+      </div>
+
+      <h4 class="text-xl mt-2">Company link:</h4>
+      <a href="<%= post.companylink%>" id="companylink" class="text-zinc-50"><%= post.companylink %></a>
+      <h4 class="text-xl mt-2">Position Link:</h4>
+      <a href="<%= post.joblink%>" id="joblink" class="text-zinc-50"><%= post.joblink %></a>
+
+      <h3 class="text-2xl mt-2">Bounty Hunter's Area:</h3>
       <div class="row justify-content-between">
 
         <%if(post.user == user.id){ %>
-          <div class="mb-3">
-            <h4><label for="contacts">Contacts:</label></h4>
-            <p id="contacts"><%= post.contacts %></p>
-            <h4><label for="notes">Notes:</label></h4>
-            <p id="notes"><%= post.notes %></p>
+          <div class="mt-2">
+            <h4 class="text-2xl"><label for="contacts">Contacts:</label></h4>
+            <p id="contacts" class="text-zinc-50"><%= post.contacts %></p>
+            <h4 class="text-2xl"><label for="notes">Notes:</label></h4>
+            <p id="notes" class="text-zinc-50"><%= post.notes %></p>
           </div>
 
 
         <form
           action="/post/editPosition/<%= post.id %>?_method=PUT"
           method="POST"
-          
+          class="text-xl"
         >
-        <div class="mb-3">
+        <h3 class="text-2xl mt-2">Edit this Position:</h3>
+        <div class="mt-2">
           <label for="title" class="form-label">Title</label>
-          <input type="text" autocomplete="off" id="newtitle" name="newtitle">
+          <input type="text" autocomplete="off" id="newtitle" name="newtitle" class="input input-bordered input-primary w-full max-w-cs" />
         </div>
-        <div class="mb-3">
+        <div class="mt-2">
           <label for="companylink" class="form-label">Company Link</label>
-          <textarea class="form-control" id="newcompanylink" name="newcompanylink" value=""></textarea>
+          <textarea id="newcompanylink" name="newcompanylink" value="" class="textarea textarea-primary w-full"></textarea>
         </div>
-        <div class="mb-3">
+        <div class="mt-2">
           <label for="joblink" class="form-label">Job Link</label>
-          <textarea class="form-control" id="newjoblink" name="newjoblink"></textarea>
+          <textarea class="textarea textarea-primary w-full" id="newjoblink" name="newjoblink"></textarea>
         </div>
-        <div class="mb-3">
+        <div class="mt-2">
           <label for="contacts" class="form-label">Contacts</label>
-          <textarea class="form-control" id="newcontacts" name="newcontacts"></textarea>
+          <textarea class="textarea textarea-primary w-full" id="newcontacts" name="newcontacts"></textarea>
         </div>
-        <div class="mb-3">
+        <div class="mt-2">
           <label for="notes" class="form-label">Notes</label>
-          <textarea class="form-control" id="newnotes" name="newnotes"></textarea>
+          <textarea class="textarea textarea-primary w-full" id="newnotes" name="newnotes"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Edit this Position</button>
       </form>
@@ -53,22 +66,12 @@
       method="POST"
       class="col-3"
       >
-        <button class="btn btn-primary fa fa-trash" type="submit"></button>
+        <button class="btn btn-primary" type="submit">Delete</button>
       </form>
         <%}%>
       </div>
     </div>
-    <div class="col-3 mt-5">
 
-        <div>    
-          <h6 ><label for="createdAt">Freshness Dated:</label></h6>
-          <h5><%= post.createdAt.toDateString() %></h5>
-        </div>
-        <div>
-          <h6 ><label for="status">Status:</label></h6>
-          <h5><%= post.status %></h5>
-        </div>
-      </div>
 
     <!-- Navigation Buttons -->
     <div class="col-6 mt-5">
