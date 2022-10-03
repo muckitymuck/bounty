@@ -1,20 +1,21 @@
-# Install
+To Be Updated:
 
-`npm install`
+Muckitymuck.com Portfolio
+This is a portfolio site to present me and my contact information along with sample works done by me.
 
----
+Link to project: https://www.muckitymuck.com/
 
-# Things to add
+muckitymuck portfolio
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
+How It's Made:
+Tech used: HTML, CSS, JavaScript
 
----
+Admittedly, I am not a designer. I used https://html5up.net/ template and made it my own. The content is my own and it connects to contacts and projects I made myself.
 
-# Run
+Lessons Learned:
+I learned about good layouts and stylesheets that catch the eye. I hope the content is compelling to the visitor.
 
-`npm start`
+Optimizations
+old muckitymuck portfolio
+
+I built the old portfolio site using Bootstrap and it was fine for the year 2020. There was not much interactivity or UX. The layout and the Font choices were not great. I decided in 2022 to start a new site with clean setup and copy
