@@ -1,21 +1,15 @@
-To Be Updated:
 
-Muckitymuck.com Portfolio
-This is a portfolio site to present me and my contact information along with sample works done by me.
+Bounty 
+The Job Hunt Record App
+This is a Full Stack Web Application to track job applications and contacts at the companies to aid in career development.
 
-Link to project: https://www.muckitymuck.com/
-
-muckitymuck portfolio
+Link to project: https://web-production-1c82.up.railway.app/
 
 How It's Made:
-Tech used: HTML, CSS, JavaScript
-
-Admittedly, I am not a designer. I used https://html5up.net/ template and made it my own. The content is my own and it connects to contacts and projects I made myself.
+Tech used: HTML, TailWindCSS, JavaScript, MongoDB, Auth0, and MVC Architecture
 
 Lessons Learned:
-I learned about good layouts and stylesheets that catch the eye. I hope the content is compelling to the visitor.
+I learned about full stack development in a MVC architecture. I hope the usefullness of the app is obvious to all that use it.
 
-Optimizations
-old muckitymuck portfolio
-
-I built the old portfolio site using Bootstrap and it was fine for the year 2020. There was not much interactivity or UX. The layout and the Font choices were not great. I decided in 2022 to start a new site with clean setup and copy
+Optimizations:
+Future planned features include a Group setting for people to share and edit job postings to aid the record keeping process.  This will also include sharing features with email option.
