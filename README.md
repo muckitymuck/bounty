@@ -5,6 +5,8 @@ This is a Full Stack Web Application to track job applications and contacts at t
 
 Link to project: https://web-production-1c82.up.railway.app/
 
+
+
 How It's Made:
 Tech used: HTML, TailWindCSS, JavaScript, MongoDB, Auth0, and MVC Architecture
 
