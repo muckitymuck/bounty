@@ -3,7 +3,7 @@ Bounty
 The Job Hunt Record App
 This is a Full Stack Web Application to track job applications and contacts at the companies to aid in career development.
 
-Link to project: https://web-production-1c82.up.railway.app/
+Link to project: https://bounty.onrender.com
 
 
 
