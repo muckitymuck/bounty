@@ -1,5 +1,5 @@
 FROM node:16.16.0
-#ENV NODE_ENV=/config/.env
+ENV NODE_ENV=/config/.env
 WORKDIR /bounty
 
 COPY ["package.json", "package-lock.json*", "./"]
