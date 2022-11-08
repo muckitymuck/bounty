@@ -17,3 +17,5 @@ Also, learned how to make docker files and deploy containers.
 
 Optimizations:
 Future planned features include a Group setting for people to share and edit job postings to aid the record keeping process.  This will also include sharing features with email option.
+
+Will be adding new private deployment and detailing the deployment on the landing page.
