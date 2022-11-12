@@ -20,4 +20,4 @@ Future planned features include a Group setting for people to share and edit job
 
 Will be adding new private deployment and detailing the deployment on the landing page.
 
-Will be deployed via Ansible.
+Will be deployed via Ansible. Possibly a Kubernetes app.
