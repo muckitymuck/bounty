@@ -1,0 +1,9 @@
+name: pull-run-docker
+on: [push]
+jobs:
+  build: 
+    runs-on: self-hosted
+    
+  
+  
+  
