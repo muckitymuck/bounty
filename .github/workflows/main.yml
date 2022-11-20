@@ -6,9 +6,7 @@ jobs:
     steps:
       - uses: action/checkout@v2
       - name: run new docker image
-      - uses: actions/setup-node@v2.1.5
-      - run:  pwd
-      - run: echo "working"  
+        run:  pwd
   
   
   
