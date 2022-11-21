@@ -5,14 +5,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
+      - name: stop current container
+        run:  sudo docker stop $(docker ps -a -q)      
       - name: remove old images
         run:  sudo docker rmi -f $(docker images -q)
       - name: pull new docker image
         run:  sudo docker pull muckitymuck/bounty:latest
       - name: list current docker container
         run:  sudo docker container ls
-      - name: stop current container
-        run:  sudo docker stop $(docker ps -a -q)
       - name: docker container restart with new image
         run:  sudo docker run -d --restart unless-stopped -p 80:80 muckitymuck/bounty
               
