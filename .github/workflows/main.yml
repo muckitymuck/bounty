@@ -5,9 +5,11 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - name: run new docker image
+      - name: pull new docker image
+        run:  sudo docker pull muckitymuck/bounty:latest
+      - name: list current docker container
         run:  sudo docker container ls
-              #sudo docker pull muckitymuck/bounty:latest
+              
         
   
   
