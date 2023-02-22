@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+//Mongoose interacts with MongoDB
 const PostSchema = new mongoose.Schema({
   title: {
     type: String,
